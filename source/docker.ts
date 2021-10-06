@@ -14,7 +14,7 @@ export async function resolveDockerHostIP(): Promise<string> {
     if (__hostIP) return __hostIP;
     try {
         const result = await dns.lookup("host.docker.internal", {
-            family: 4
+            family: 4,
         });
         if (result?.address) {
             __hostIP = result.address;
