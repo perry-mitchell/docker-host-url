@@ -1,0 +1,41 @@
+{
+  "name": "docker-host-url",
+  "version": "0.0.0",
+  "description": "URL host resolver for Docker applications",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perry-mitchell/docker-host-url.git"
+  },
+  "keywords": [
+    "docker",
+    "url",
+    "resolve",
+    "host",
+    "IP"
+  ],
+  "author": "Perry Mitchell <perry@perrymitchell.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/perry-mitchell/docker-host-url/issues"
+  },
+  "homepage": "https://github.com/perry-mitchell/docker-host-url#readme",
+  "dependencies": {
+    "docker-host-ip": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.3",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.4.3"
+  }
+}
