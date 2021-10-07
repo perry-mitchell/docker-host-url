@@ -15,6 +15,16 @@
   "files": [
     "dist/**/*"
   ],
+  "lint-staged": {
+    "**/*.{js,ts,json}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/perry-mitchell/docker-host-url.git"
