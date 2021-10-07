@@ -4,9 +4,6 @@ import detectHostIP from "docker-host-ip";
 let __hostIP: string = null;
 
 export function getResolvedDockerHostIP(): string {
-    if (__hostIP === null) {
-        throw new Error("No docker host resolved");
-    }
     return __hostIP;
 }
 
