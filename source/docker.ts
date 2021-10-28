@@ -21,6 +21,9 @@ export async function resolveDockerHostIP(): Promise<string> {
     __hostIP = await new Promise<string>((resolve, reject) => {
         detectHostIP((err: Error, result: string) => {
             if (err) {
+                if (/unable to find ip/i.test(err.message)) {
+                    resolve("");
+                }
                 return reject(err);
             }
             resolve(result || "");
