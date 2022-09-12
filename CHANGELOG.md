@@ -1,5 +1,10 @@
 # Docker Host URL Changelog
 
+## v0.2.0
+_2022-09-12_
+
+ * Handle URLs with credentials (eg. MySQL URIs: `mysql://user:pass@host.docker.internal:3306/dbname`)
+
 ## v0.1.2
 _2021-10-28_
 

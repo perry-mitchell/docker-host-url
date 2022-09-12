@@ -3,6 +3,13 @@
 
 This library provides URL resolving helpers that resolve URLs that contain the domain `host.docker.internal`. On Mac and Linux hosts this resolves differently, and this library is designed to handle both types of hosts.
 
+You can pass a variety of values to the resolution functions that will detect and replace `host.docker.internal`:
+
+ * HTTP/HTTPS URLs: `http://host.docker.internal/some/page`
+ * Other protocols: `ftp://host.docker.internal/dir`
+ * Just the domain: `host.docker.internal`
+ * URLs with credentials: `mysql://user:password@host.docker.internal:3306/dbname`
+
 ## Installation
 
 Install this library as a dependency to use in any environment:
