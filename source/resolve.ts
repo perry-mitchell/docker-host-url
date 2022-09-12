@@ -1,7 +1,7 @@
 import { getResolvedDockerHostIP, resolveDockerHostIP } from "./docker";
 
 function getDockerHostRegexp(): RegExp {
-    return /(^|\/)(host\.docker\.internal)($|\/|:)/;
+    return /(^|\/|@)(host\.docker\.internal)($|\/|:)/;
 }
 
 export async function resolveURLAsync(url: string): Promise<string> {

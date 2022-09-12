@@ -31,3 +31,7 @@ export async function resolveDockerHostIP(): Promise<string> {
     });
     return __hostIP;
 }
+
+export function setDockerHostIP(ip: string): void {
+    __hostIP = ip;
+}
